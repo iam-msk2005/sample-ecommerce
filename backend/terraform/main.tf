@@ -44,7 +44,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
     name       = "default"
     node_count = 2             # Number of worker nodes
     vm_size    = "Standard_B2s"  # VM type (2 vCPUs, 4GB RAM)
-    vnet_subnet_id = azurerm_subnet.frontend_subnet.id
+    vnet_subnet_id = azurerm_subnet.backend_subnet.id
   }
 
   identity {
